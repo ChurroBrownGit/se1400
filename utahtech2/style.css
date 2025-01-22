@@ -1,0 +1,48 @@
+body { 
+    color: #666666;
+    background-color: #FFFFFF;
+    font-family: sans-serif;
+}
+
+header {
+    background-color: #003058;
+    color: #FFFFFF;
+    font-family: Georgia
+}
+
+header h1 {
+    line-height: 140%;
+    padding: .5rem;
+}
+
+nav {
+    font-weight: bold;
+    background-color: #F3F3F3;
+}
+
+h2 {
+    color: #424242;
+    font-family: Georgia;
+}
+
+dt {
+    color: #003058;
+    font-weight: bold;
+}
+
+.ut {
+    color: #BA1C21;
+    font-weight: bold;
+}
+
+footer {
+    font-size: .70rem;
+    font-style: italic;
+    text-align: center;
+}
+
+#wrapper {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
