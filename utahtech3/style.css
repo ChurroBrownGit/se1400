@@ -1,0 +1,55 @@
+body { 
+    color: #666666;
+    background-image: linear-gradient(to bottom, #eeeeee , #ffffff);
+    background-attachment: fixed;
+    font-family: sans-serif;
+}
+
+header {
+    background-color: #003058;
+    color: #FFFFFF;
+    font-family: Georgia
+}
+
+header h1 {
+    line-height: 140%;
+    padding: .5rem;
+    background-image: "utahtechlogo.svg";
+    background-position: right;
+}
+
+nav {
+    font-weight: bold;
+    background-color: #F3F3F3;
+}
+
+h2 {
+    color: #424242;
+    font-family: Georgia;
+}
+
+dt {
+    color: #003058;
+    font-weight: bold;
+}
+
+.ut {
+    color: #BA1C21;
+    font-weight: bold;
+}
+
+footer {
+    font-size: .70rem;
+    font-style: italic;
+    text-align: center;
+}
+
+#wrapper {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #ffffff;
+    min-width: 960;
+    max-width: 2048;
+    box-shadow: 0px 3px 3px rgba(66, 66, 66, 0.3);
+}
