@@ -16,11 +16,19 @@ header h1 {
     padding: .5rem;
     background-image: "utahtechlogo.svg";
     background-position: right;
+    background-repeat: no-repeat;
+    padding-left: 1em;
+    background-origin: content-box;
+    margin-bottom:0;
 }
 
 nav {
     font-weight: bold;
     background-color: #F3F3F3;
+    padding-top: 0.5rem;
+    padding-right: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 2rem;
 }
 
 h2 {
@@ -42,6 +50,7 @@ footer {
     font-size: .70rem;
     font-style: italic;
     text-align: center;
+    padding: 1rem;
 }
 
 #wrapper {
@@ -53,3 +62,35 @@ footer {
     max-width: 2048;
     box-shadow: 0px 3px 3px rgba(66, 66, 66, 0.3);
 }
+
+h3 {
+    color: #003058;
+}
+
+main {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+#homehero {
+    height: 300px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#studenthero {
+    height: 300px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#facultyhero {
+    height: 300px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+nav a {text-decoration: none;}
