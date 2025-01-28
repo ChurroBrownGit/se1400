@@ -73,6 +73,7 @@ main {
 }
 
 #homehero {
+    background-image: "homehero.jpg";
     height: 300px;
     background-size: cover;
     background-repeat: no-repeat;
@@ -80,6 +81,7 @@ main {
 }
 
 #studenthero {
+    background-image: "studenthero.jpg";
     height: 300px;
     background-size: cover;
     background-repeat: no-repeat;
@@ -87,6 +89,7 @@ main {
 }
 
 #facultyhero {
+    background-image: "facultyhero.jpg";
     height: 300px;
     background-size: cover;
     background-repeat: no-repeat;
