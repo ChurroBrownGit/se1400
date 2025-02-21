@@ -56,6 +56,8 @@ footer {
     font-style: italic;
     text-align: center;
     padding: 1rem;
+    grid-row: 5 / 6;
+    grid-column: 2 / -2;
 }
 
 #wrapper {
@@ -69,8 +71,11 @@ h3 {
 }
 
 main {
+    background-color: #ffffff;
     padding-left: 2rem;
     padding-right: 2rem;
+    grid-row:  4 / 5;
+    grid-column: 2 / -2;
 }
 
 #homehero {
@@ -79,6 +84,8 @@ main {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    grid-row: 3 / 4;
+    grid-column: 2 / -2;
 }
 
 #studenthero {
@@ -87,6 +94,8 @@ main {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    grid-row: 3 / 4;
+    grid-column: 2 / -2;
 }
 
 #facultyhero {
@@ -95,6 +104,8 @@ main {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    grid-row: 3 / 4;
+    grid-column: 2 / -2;
 }
 
 nav a {text-decoration: none;}
@@ -102,19 +113,3 @@ nav a {text-decoration: none;}
 * {
     box-sizing: border-box;
 }
-
-#homehero {
-    grid-row: 3 / 4;
-    grid-column: 2 / -2;
-}
-
-#studenthero {
-    grid-row: 3 / 4;
-    grid-column: 2 / -2;
-}
-
-#facultyhero {
-    grid-row: 3 / 4;
-    grid-column: 2 / -2;
-}
-
