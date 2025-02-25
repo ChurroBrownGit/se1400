@@ -25,6 +25,11 @@ header h1 {
     margin:0;
 }
 
+header a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
 nav {
     font-weight: bold;
     background-color: #F3F3F3;
@@ -112,4 +117,9 @@ nav a {text-decoration: none;}
 
 * {
     box-sizing: border-box;
+}
+
+main img {
+    float: right;
+    padding-left: 2rem;
 }
