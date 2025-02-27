@@ -10,6 +10,7 @@ header {
 
 nav {
     background-color:rgba(39, 255, 1, 0.3);
+    grid-column-start: 2;
 }
 
 main {
