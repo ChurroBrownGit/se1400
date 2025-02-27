@@ -1,0 +1,21 @@
+body {
+    display: grid;
+    color: rgba(255, 149, 0, 0.3);
+    grid-template-columns: minmax(0px, 1fr) repeat(6, minmax(0, 175px)) minmax(0px, 1fr);
+}
+
+header {
+    color:rgba(0, 13, 255, 0.3);
+}
+
+nav {
+    color:rgba(39, 255, 1, 0.3);
+}
+
+main {
+    color:rgba(255, 0, 0, 0.3);
+}
+
+footer {
+    color:rgba(242, 255, 0, 0.3);
+}
