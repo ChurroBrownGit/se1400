@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Grid Example</title>
+    <style>
+      .grid-container {
+        display: grid;
+        grid-template-columns: repeat(4, auto); /* Creates 3 equal columns */
+        grid-template-rows: auto;
+        gap: 20px; /* Space between grid items */
+        padding: 20px;
+        background-color: #f3f3f3;
+      }
+
+      @media (max-width: 600px) { .grid-container { grid-template-columns: 1fr; } }
+
+      .grid-container:hover { background-color: #ddd; }
+      .grid-item:nth-child(odd) { background-color: #ff5722; }
+      .grid-item:nth-child(even) { background-color: #2196F3; }
+      .grid-item { box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2); }
+      .grid-item:hover { transform: scale(1.1); transition: transform 0.3s ease-in-out; }
+
+      .grid-item {
+        background-color: #4caf50;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        text-align: center;
+        font-size: 1.2em;
+        border-radius: 5px;
+        border: 2px solid black;
+      }
+
+      /* Positioning specific items */
+      .item1 {
+        grid-column: span 2; /* Item spans 2 columns */
+      }
+
+      .item4 {
+        grid-row: span 2; /* Item spans 2 rows */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="grid-item item1">Item 1 (Spans 2 columns)</div>
+      <div class="grid-item">Item 2</div>
+      <div class="grid-item">Item 3</div>
+      <div class="grid-item item4">Item 4 (Spans 2 rows)</div>
+      <div class="grid-item">Item 5</div>
+      <div class="grid-item">Item 6</div>
+      <div class="grid-item">Item 7</div>
+      <div class="grid-item">Item 8</div>
+    </div>
+  </body>
+</html>

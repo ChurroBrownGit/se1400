@@ -6,11 +6,14 @@ body {
 
 header {
     background-color:rgba(0, 13, 255, 0.3);
+    grid-column: span 10;
+    text-align: left;
 }
 
 nav {
-    background-color:rgba(39, 255, 1, 0.3);
-    grid-column-start: 2;
+    background-color:rgba(0, 13, 255, 0.3);
+    grid-column: span 10;
+    text-align: right;
 }
 
 main {
@@ -20,4 +23,7 @@ main {
 
 footer {
     background-color:rgba(242, 255, 0, 0.3);
+    grid-column-start: 3;
+    text-align: center;
+    grid-row: 7;
 }
