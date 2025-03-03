@@ -8,17 +8,26 @@ header {
     background-color:rgba(0, 13, 255, 0.3);
     grid-column: span 10;
     text-align: left;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-nav {
-    background-color:rgba(0, 13, 255, 0.3);
-    grid-column: span 10;
-    text-align: right;
+header h1 {
+    display: inline;
+    float: left;
+    margin: 0;
+}
+
+header nav {
+    float: right;
 }
 
 main {
     background-color:rgba(255, 0, 0, 0.3);
     grid-column-start: 3;
+    grid-column: 3 / 7;
 }
 
 footer {
@@ -26,4 +35,10 @@ footer {
     grid-column-start: 3;
     text-align: center;
     grid-row: 7;
+    grid-column: span 10;
+    margin: 1px;
+}
+
+footer p {
+    margin: 1px;
 }
