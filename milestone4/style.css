@@ -1,11 +1,12 @@
 body {
     display: grid;
-    background-color: rgba(255, 149, 0, 0.3);
+    background-color: white;
     grid-template-columns: minmax(0px, 1fr) repeat(6, minmax(0, 175px)) minmax(0px, 1fr);
 }
 
 header {
-    background-color:rgba(0, 13, 255, 0.3);
+    background-image: linear-gradient(to right, red, white);
+    font-family: Irish Grover;
     grid-column: span 10;
     text-align: left;
     padding: 10px;
@@ -24,14 +25,21 @@ header nav {
     float: right;
 }
 
+div {
+    grid-column: span 10;
+    grid-row: 2 / 3;
+    text-align: center;
+    background-image: linear-gradient(rgba(255, 0 , 0 , 0.5) , rgba(255, 255, 255, 0.5), url());
+}
+
 main {
-    background-color:rgba(255, 0, 0, 0.3);
+    background-color: white;
     grid-column-start: 3;
-    grid-column: 3 / 7;
+    grid-column: 1 / -1;
 }
 
 footer {
-    background-color:rgba(242, 255, 0, 0.3);
+    background-color: white ;
     grid-column-start: 3;
     text-align: center;
     grid-row: 7;
