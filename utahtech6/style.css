@@ -144,15 +144,6 @@ main {
     grid-column: 1 / -1;
 }
 
-#mySubmit {
-    width: 10rem;
-    font-size: 1rem;
-    grid-column: 2 / 3;
-    outline: none;
-    color: #666666;
-    background-color: #f0f0f0;
-}
-
 nav a {text-decoration: none;}
 
 * {
@@ -292,3 +283,7 @@ label {
     text-align: right;
 }
 
+#mySubmit {
+    width: 10rem;
+    grid-column: 2 / 3;
+}
