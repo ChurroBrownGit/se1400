@@ -247,7 +247,7 @@ main img {
 form {
     display: grid;
     grid-template-rows: auto;
-    grid-template-columns: 200px, 1fr;
+    grid-template-columns: 200px 1fr;
     gap: 0.75rem;
     width: 100%
 }
