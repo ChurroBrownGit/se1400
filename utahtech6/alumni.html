@@ -26,17 +26,20 @@
   <main>
     <h2>Join Alumni Mailing List</h2>
     <h3>Request Alumni Newsletter</h3>
+    <p>Required information is marked with an asterick (*).</p>
     <form action="https://kearl.net/se1400/mail.php" method="post">
       <label for="myFName">First Name:</label>
-      <input type="text" name="myFName">
+      <input type="text" name="myFName" required>
       <label for="myLName">Last Name:</label>
-      <input type="text" name="myLName">
+      <input type="text" name="myLName" required>
       <label for="myEmail">E-mail:</label>
-      <input type="text" name="myEmail">
+      <input type="text" name="myEmail" type="email" required>
       <label for="myPhone">Phone:</label>
-      <input type="text" name="myPhone">
+      <input type="text" name="myPhone" type="tel">
+      <label for="graduationDate">Graduation Date:</label>
+      <input type="date" id="graduationDate" name="graduationDate">
       <label for="myComments">Comments:</label>
-      <textarea name="myComments" rows="2" cols="20"></textarea>
+      <textarea name="myComments" rows="2" cols="20" required></textarea>
       <button type="submit" id="mySubmit">Submit</button>
     </form>
   </main>
