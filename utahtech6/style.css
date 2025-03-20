@@ -286,4 +286,5 @@ label {
 #mySubmit {
     width: 10rem;
     grid-column: 2 / 3;
+    outline: none;
 }
