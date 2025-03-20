@@ -4,15 +4,27 @@ body {
     grid-template-columns: minmax(0px, 1fr) repeat(6, minmax(0, 175px)) minmax(0px, 1fr);
 }
 
-header {
+.irish-grover-regular {
+    font-family: "Irish Grover", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .finger-paint-regular {
+    font-family: "Finger Paint", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  header {
     background-image: linear-gradient(to right, red, white);
-    font-family: Irish Grover;
+    font-family: 'Irish Grover';
     grid-column: span 10;
     text-align: left;
     padding: 10px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 header h1 {
@@ -23,19 +35,31 @@ header h1 {
 
 header nav {
     float: right;
+    text-decoration: none;
+    font-family: 'Inter';
+    
 }
 
 div {
     background-image: linear-gradient(rgba(255, 0 , 0 , 0.5) , rgba(255, 255, 255, 0.5)), url(cat.png);
+    background-repeat: no-repeat;
+    font-family: 'Irish Grover';
+    background-position: center;
+    border: 69%;
+    width: auto;
+    justify-content: space-evenly;
     grid-column: span 10;
     grid-row: 2 / 3;
     text-align: center;
+    color: white;
 }
 
 main {
-    background-color: white;
+    background-image: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 1), rgba(255, 0 , 0 , 0.2));
     grid-column-start: 3;
     grid-column: 1 / -1;
+    font-family: 'Finger Paint';
+    font-size: small;
 }
 
 footer {
