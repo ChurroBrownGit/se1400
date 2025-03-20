@@ -134,6 +134,16 @@ main {
     grid-column: 1 / -1;
 }
 
+#alumnihero {
+    background-image: url("alumnihero.jpg");
+    height: 300px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    grid-row: 3 / 4;
+    grid-column: 1 / -1;
+}
+
 nav a {text-decoration: none;}
 
 * {
@@ -192,6 +202,12 @@ main img {
         height: auto;
     }
 
+    #alumnihero {
+        grid-row: 2 / 3;
+        grid-column: 5 / 8;
+        height: auto;
+    }
+
     main img {
         float: none;
         width: 100%;
@@ -218,7 +234,56 @@ main img {
     #hero {
         display: none;
     }
+    
     #facultyhero {
         display: none;
     }
+
+    #alumnihero {
+        display: none;
+    }
+}
+
+form {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 200px, 1fr;
+    gap: 0.75rem;
+    width: 100%
+}
+
+input {
+    font-size: 1rem;
+    padding: 10px;
+    color: #666666;
+    background-color: #fafafa;
+    border: none;
+}
+
+textarea {
+    font-size: 1rem;
+    padding: 10px;
+    color: #666666;
+    background-color: #fafafa;
+    border: none;
+}
+
+input:focus {
+    outline: none;
+    background-color: #f0f0f0;
+}
+
+textarea:focus {
+    outline: none;
+    background-color: #f0f0f0;
+}
+
+label {
+    padding: 10px;
+    text-align: right;
+}
+
+#mySubmit {
+    width: 10rem;
+    grid-column: 2 / 3;
 }
