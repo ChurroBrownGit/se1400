@@ -59,15 +59,17 @@ a {
 }
 
 #one {
-    text-align: left;
     width: 420px;
     height: 410px;
     background: url(cat5.png);
     box-shadow: -9px 8px 4px rgba(0, 0, 0, 0.75);
 }
 
+#onetext {
+    text-align: left;
+}
+
 #two {   
-    text-align: right;
     display:flex;
     float: right;
     width: 295px;
@@ -78,14 +80,21 @@ a {
     box-shadow: 9px 8px 4px rgba(0, 0, 0, 0.75);
 }
 
+#twotext {
+    text-align: right;
+}
+
 #three {
-    text-align: left;
     width: 444px;
     height: 414px;
     left: 621px;
     top: 1062px;
     background: url(cat7.png);
     box-shadow: 9px 8px 4px rgba(0, 0, 0, 0.75);
+}
+
+#threetext {
+    text-align: left;
 }
 
 main {
