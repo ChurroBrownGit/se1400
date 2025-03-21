@@ -144,17 +144,6 @@ main {
     grid-column: 1 / -1;
 }
 
-nav a {text-decoration: none;}
-
-* {
-    box-sizing: border-box;
-}
-
-main img {
-    float: right;
-    padding-left: 2rem;
-}
-
 #bluebar {
     background-color: #003058;
     grid-row: 1 / 2;
@@ -166,6 +155,19 @@ main img {
     grid-row: 2 / 3;
     grid-column: 1 / -1;
 }
+
+nav a {text-decoration: none;}
+
+* {
+    box-sizing: border-box;
+}
+
+main img {
+    float: right;
+    padding-left: 2rem;
+}
+
+
 
 @media only screen and (max-width: 1100px) {
     #wrapper {
@@ -231,7 +233,7 @@ main img {
         display: none;
     }
 
-    #hero {
+    #studenthero {
         display: none;
     }
     
