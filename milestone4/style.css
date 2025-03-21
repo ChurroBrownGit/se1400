@@ -35,13 +35,16 @@ header h1 {
 
 header nav {
     float: right;
-    text-decoration: none;
     font-family: 'Inter';
-    
+}
+
+a {
+    color: black;
+    text-decoration: none;
 }
 
 div {
-    background-image: linear-gradient(rgba(255, 0 , 0 , 0.5) , rgba(255, 255, 255, 0.5)), url(cat.png);
+    background-image: linear-gradient(rgba(255, 0 , 0 , 0.5) , rgba(255, 255, 255, 0.5));
     background-repeat: no-repeat;
     font-family: 'Irish Grover';
     background-position: center;
@@ -56,6 +59,9 @@ div {
 
 main {
     background-image: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 1), rgba(255, 0 , 0 , 0.2));
+    background-repeat: repeat;
+    background-size: 100px;
+    background-position: 100px;
     grid-column-start: 3;
     grid-column: 1 / -1;
     font-family: 'Finger Paint';
@@ -73,4 +79,6 @@ footer {
 
 footer p {
     margin: 1px;
+    font-family: 'Lemon';
+    font-size: small;
 }
