@@ -43,13 +43,12 @@ a {
     text-decoration: none;
 }
 
-div {
-    background-image: linear-gradient(rgba(255, 0 , 0 , 0.5) , rgba(255, 255, 255, 0.5));
+#divider {
+    background-image: linear-gradient(rgba(255, 0 , 0 , 0.5) , rgba(255, 255, 255, 0.5)), url(cat.png);
     background-repeat: no-repeat;
     font-family: 'Irish Grover';
     background-position: center;
-    border: 69%;
-    width: auto;
+    background-size: cover;
     justify-content: space-evenly;
     grid-column: span 10;
     grid-row: 2 / 3;
@@ -57,11 +56,23 @@ div {
     color: white;
 }
 
+#one {
+    text-align: left;
+}
+
+#two {
+    text-align: right;
+}
+
+#three {
+    text-align: left;
+}
+
 main {
-    background-image: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 1), rgba(255, 0 , 0 , 0.2));
+    background-image: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 1), rgba(255, 0 , 0 , 0.2)), url(silloet.png);
     background-repeat: repeat;
-    background-size: 100px;
-    background-position: 100px;
+    background-size: 100%;
+    background-position: auto;
     grid-column-start: 3;
     grid-column: 1 / -1;
     font-family: 'Finger Paint';
