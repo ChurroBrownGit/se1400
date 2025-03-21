@@ -27,6 +27,8 @@ body {
     justify-content: space-evenly;
 }
 
+
+
 header h1 {
     display: inline;
     float: left;
@@ -58,14 +60,32 @@ a {
 
 #one {
     text-align: left;
+    width: 420px;
+    height: 410px;
+    background: url(cat5.png);
+    box-shadow: -9px 8px 4px rgba(0, 0, 0, 0.75);
 }
 
-#two {
+#two {   
     text-align: right;
+    display:flex;
+    float: right;
+    width: 295px;
+    height: 269px;
+    left: 712px;
+    top: 481px;
+    background: url(cat6.png);
+    box-shadow: 9px 8px 4px rgba(0, 0, 0, 0.75);
 }
 
 #three {
     text-align: left;
+    width: 444px;
+    height: 414px;
+    left: 621px;
+    top: 1062px;
+    background: url(cat7.png);
+    box-shadow: 9px 8px 4px rgba(0, 0, 0, 0.75);
 }
 
 main {
