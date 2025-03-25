@@ -2,6 +2,8 @@ body {
     display: grid;
     background-color: white;
     grid-template-columns: minmax(0px, 1fr) repeat(6, minmax(0, 175px)) minmax(0px, 1fr);
+    background-image: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 1), rgba(255, 0 , 0 , 0.2)), url(silloet.png);
+    background-repeat: repeat;
 }
 
 .irish-grover-regular {
@@ -26,8 +28,6 @@ body {
     align-items: center;
     justify-content: space-evenly;
 }
-
-
 
 header h1 {
     display: inline;
@@ -58,34 +58,38 @@ a {
     color: white;
 }
 
-#one {
-    width: 420px;
+#two {
+    float: right;
+    width: 40%;
     height: 410px;
     background: url(cat5.png);
     box-shadow: -9px 8px 4px rgba(0, 0, 0, 0.75);
+    background-repeat: no-repeat;
 }
 
 #onetext {
-    text-align: left;
+    float: left;
+    max-width: 40%;
+    padding: 1em;
 }
 
-#two {   
-    display:flex;
-    float: right;
-    width: 295px;
-    height: 269px;
-    left: 712px;
-    top: 481px;
-    background: url(cat6.png);
+#one {   
+    float: left;
     box-shadow: 9px 8px 4px rgba(0, 0, 0, 0.75);
+    margin-top: 5em;
 }
 
 #twotext {
-    text-align: right;
+    float: right;
+    clear: right;
+    padding: 1em;
+    max-width: 40%;
 }
 
 #three {
-    width: 444px;
+    float: right;
+    clear: right;
+    width: 40%;
     height: 414px;
     left: 621px;
     top: 1062px;
@@ -94,16 +98,16 @@ a {
 }
 
 #threetext {
-    text-align: left;
+    float: left;
+    max-width: 40%;
+    padding: 1em;
 }
 
 main {
-    background-image: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 1), rgba(255, 0 , 0 , 0.2)), url(silloet.png);
-    background-repeat: repeat;
     background-size: 100%;
     background-position: auto;
     grid-column-start: 3;
-    grid-column: 1 / -1;
+    grid-column: 2 / 8;
     font-family: 'Finger Paint';
     font-size: small;
 }
