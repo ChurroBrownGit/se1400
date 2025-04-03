@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="./style.css" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta name="robots" content="noindex, nofollow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>SillyGatos: Uploadt</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Finger+Paint&family=Irish+Grover&family=Lemon&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <h1>SILLYGATOS</h1>
+            <nav>
+                <a href="#">Log In</a>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="upload.html">Upload</a>
+                <a href="#">Gallery</a>
+            </nav>
+        </header>
+        <div id="divider">
+            <h2>UPLOAD</h2>
+            <p>Upload your own images here! I'll try to add them ASAP!
+            </p>&nbsp;
+        </div>
+        <main>
+            <form action="upload.php" method="post" enctype="multipart/form-data">
+                  Select image to upload:
+                  <input type="file" name="fileToUpload" id="fileToUpload">
+                  <input type="submit" value="Upload Image" name="submit">
+            </form>
+        </main>
+        <footer>
+            <p>Joel Hadley - Copyright &copy; 2025</p>
+       </footer>   
+    </body> 
+</html>
