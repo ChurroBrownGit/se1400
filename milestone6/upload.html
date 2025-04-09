@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="./style.css" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta name="robots" content="noindex, nofollow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>SillyGatos: Upload</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Finger+Paint&family=Irish+Grover&family=Lemon&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <h1>SILLYGATOS</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="upload.html">Upload</a>
+                <a href="#">Gallery</a>
+                <a href="#">COTW</a>
+            </nav>
+        </header>
+        <div id="divider">
+            <h2>UPLOAD</h2>
+            <p>Upload your own images here! I'll try to add them ASAP!
+            </p>&nbsp;
+        </div>
+        <main>
+            <form id="uploadForm" method="post" enctype="multipart/form-data">
+                <label for="fileInput"><h2>Choose image files to see previews!</h2></label>
+                <input id="fileInput" type="file" name="file" accept="image/*" multiple>
+                <div id="preview"></div>
+                <script>
+                    // Handle file input change event to show previews
+                    document.getElementById('fileInput').addEventListener('change', function(event) {
+                        var files = event.target.files;
+                        var preview = document.getElementById('preview');
+                        preview.innerHTML = ''; // Clear previous previews
+        
+                        for (var i = 0; i < files.length; i++) {
+                            var file = files[i];
+        
+                            if (!file.type.match('image.*')) {
+                                continue;
+                            }
+        
+                            var imgContainer = document.createElement('div');
+                            imgContainer.style.marginBottom = '20px';
+        
+                            var img = document.createElement('img');
+                            img.src = URL.createObjectURL(file);
+                            img.style.height = '100px';
+                            img.style.display = 'block';
+                            img.style.marginBottom = '10px';
+        
+                            var fileInfo = document.createElement('p');
+                            fileInfo.textContent = `File Name: ${file.name}, Type: ${file.type}, Size: ${file.size} bytes`;
+                            fileInfo.style.fontSize = '14px';
+                            fileInfo.style.marginTop = '0';
+        
+                            imgContainer.appendChild(img);
+                            imgContainer.appendChild(fileInfo);
+                            preview.appendChild(imgContainer);
+                        }
+                    });
+        
+                    document.getElementById('uploadForm').addEventListener('submit', function(event) {
+                        event.preventDefault(); 
+        
+                        var formData = new FormData(this);
+
+                        var uploadUrl = 'https://imagekit.io/does-not-exists'
+                        fetch(uploadUrl, {
+                            method: 'POST',
+                            body: formData
+                        })
+                        .then(response => response.json())
+                        .then(data => {
+                            console.log('Upload successful:', data);
+                            alert('File uploaded successfully!');
+                        })
+                        .catch(error => {
+                            console.error('Error uploading file:', error);
+                            alert('An error occurred while uploading.');
+                        });
+                    });
+                </script>
+                <button type="submit">Upload</button>
+            </form>
+        </main>
+        
+        <footer>
+            <p>Joel Hadley - Copyright &copy; 2025</p>
+       </footer>   
+    </body> 
+</html>
