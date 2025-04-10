@@ -71,7 +71,7 @@
         
                         var formData = new FormData(this);
 
-                        var uploadUrl = 'https://imagekit.io/does-not-exists'
+                        var uploadUrl = '#'
                         fetch(uploadUrl, {
                             method: 'POST',
                             body: formData
@@ -79,11 +79,11 @@
                         .then(response => response.json())
                         .then(data => {
                             console.log('Upload successful:', data);
-                            alert('File uploaded successfully!');
+                            alert('Currently, the image uploader is not working. However, you can still email me your images using the email posted in the Contact page. Thanks!');
                         })
                         .catch(error => {
                             console.error('Error uploading file:', error);
-                            alert('An error occurred while uploading.');
+                            alert('Currently, the image uploader is not working. However, you can still email me your images using the email posted in the Contact page. Thanks!');
                         });
                     });
                 </script>
