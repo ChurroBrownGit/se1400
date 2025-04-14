@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="./style.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SillyGatos: Homepage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Finger+Paint&family=Irish+Grover&family=Lemon&display=swap" rel="stylesheet">
+    <style>
+        .results { margin-top: 20px; display: none; }
+        .bar {
+            height: 20px;
+            background-color: #ffc107;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>SILLYGATOS</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="upload.html">Upload</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="cotw.html">COTW</a>
+        </nav>
+    </header>
+
+    <div id="divider">
+        <h2>CAT OF THE WEEK</h2>
+        <p>VOTE ON A WEEKLY CHANGING PICTURE FROM OUR GALLERY!</p>&nbsp;
+    </div>
+
+    <main>
+        <img src="cat5.png" id="two" alt="Ronalds the cat being silly">
+        <div id="onetext">
+            <h2>Meet Ronalds: The Cat, The Myth, The Menace 🐈‍⬛✨</h2>
+            <ul>
+                <li><h3>Some cats nap peacefully in sunbeams. Some chase laser dots with poise and grace. And then there’s Ronalds.</h3></li>
+                <li><h3>No one really knows where he came from. One day, a cardboard box was knocked off a shelf, and there he was — mid-yawn, completely unbothered, already plotting his next act of household sabotage.</h3></li>
+                <h2>Traits of Ronalds:</h2>
+                <li><h3>Signature move: The 2 AM hallway sprint, complete with dramatic skids and zero regrets.</h3></li>
+                <li><h3>Favorite snacks: The corners of important documents and exactly one bite out of unattended toast.</h3></li>
+                <li><h3>Hobbies: Unplugging charging cables, starting beef with invisible entities, and knocking over full glasses of water with disturbing precision.</h3></li>
+                <li><h3>Ronalds, as witnessed by his human: “I once caught Ronalds mid-air, flying sideways off the fridge, wearing a sock like a cape. He landed in a plant, stared me dead in the eyes, and sneezed.”</h3></li>
+                <li><h3>Ronalds doesn’t follow fashion trends — he creates them. His looks range from “crumb-covered couch goblin” to “majestic loaf basking in windowlight.”</h3></li>
+                <li><h3>Why we love Ronalds: Because deep down, we all are Ronalds. A little chaotic. A little dramatic. Occasionally loud for no reason. But also soft, lovable, and deeply committed to our craft.</h3></li>
+            </ul>
+        </div>
+            <!-- Voting form -->
+            <form id="voteForm">
+                <label>Rate Ronalds’ Silliness (1–10):</label><br><br>
+                <div>
+                    <script>
+                        for (let i = 1; i <= 10; i++) {
+                            document.write(`<label><input type="radio" name="rating" value="${i}"> ${i}</label> `);
+                        }
+                    </script>
+                </div><br>
+                <button type="submit">Submit Vote</button>
+            </form>
+
+            <!-- Results section -->
+            <div class="results" id="resultsSection">
+                <h3>Results</h3>
+                <div id="results"></div>
+            </div>
+    </main>
+
+    <footer>
+        <p>Joel Hadley - Copyright &copy; 2025</p>
+    </footer>
+
+    <script>
+        // Initialize voteCounts from localStorage or set to zero
+        const voteCounts = JSON.parse(localStorage.getItem('voteCounts')) || Array(10).fill(0);
+        const hasVoted = sessionStorage.getItem('hasVoted');
+
+        // Function to update the displayed results
+        function updateResults() {
+            const totalVotes = voteCounts.reduce((a, b) => a + b, 0);
+            let resultsHTML = '';
+
+            voteCounts.forEach((count, index) => {
+                const percent = totalVotes ? (count / totalVotes * 100).toFixed(1) : 0;
+                resultsHTML += `
+                    <div>${index + 1}: ${count} vote(s) — ${percent}%
+                        <div class="bar" style="width: ${percent}%"></div>
+                    </div>
+                `;
+            });
+
+            document.getElementById('results').innerHTML = resultsHTML;
+            document.getElementById('resultsSection').style.display = 'block';
+        }
+
+        // Event listener for the voting form submission
+        document.getElementById('voteForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            if (hasVoted) {
+                alert("You've already voted!");
+                return;
+            }
+
+            const rating = parseInt(document.querySelector('input[name="rating"]:checked')?.value);
+
+            if (!rating || rating < 1 || rating > 10) {
+                alert("Please select a rating from 1 to 10.");
+                return;
+            }
+
+            // Increment the vote count for the selected rating
+            voteCounts[rating - 1]++;
+            sessionStorage.setItem('hasVoted', 'true');
+
+            // Save the updated voteCounts to localStorage
+            localStorage.setItem('voteCounts', JSON.stringify(voteCounts));
+
+            // Update the displayed results
+            updateResults();
+        });
+
+        // Initialize the results display on page load
+        if (hasVoted) {
+            updateResults();
+        }
+    </script>
+</body>
+</html>

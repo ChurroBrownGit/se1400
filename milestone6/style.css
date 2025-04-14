@@ -124,6 +124,18 @@ a {
     padding: 1em;
 }
 
+#voteForm {
+    float: right;
+}
+
+#resultsSection {
+    float: right;
+}
+
+#results {
+    float: right;
+}
+
 main {
     background-size: 100%;
     background-position: auto;
