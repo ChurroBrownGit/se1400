@@ -124,16 +124,50 @@ a {
     padding: 1em;
 }
 
-#voteForm {
-    float: right;
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px; /* spacing between images */
+    padding: 20px;
 }
 
-#resultsSection {
-    float: right;
+.gallery-img {
+    width: 200px; /* smaller size */
+    height: auto;
+    box-shadow: -4px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
 }
 
-#results {
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto; 
+}
+
+.feature-img {
+    width: 90%;
+    max-width: 1200px;
+    height: auto;
+    display: block;
+    margin: 20px auto; /* centers it with spacing */
+    object-fit: cover;
+    border-radius: 8px; /* optional: smooth corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* optional: soft shadow */
+}
+
+.gallery-img:hover {
+    transform: scale(1.05);
+}
+
+#votes {
+    clear: right;
     float: right;
+    margin-right: 1em;
+    margin-top: 1em;
 }
 
 main {
